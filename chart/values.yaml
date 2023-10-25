@@ -107,8 +107,7 @@ rancherImage: rancher/rancher
 replicas: 3
 
 # Custom. Optional. List of labels used to schedule pods on specific nodes. 
-nodeSelector:
-  dedicated: cluster-tools
+nodeSelector: {}
 
 # Set priorityClassName to avoid eviction
 priorityClassName: rancher-critical
