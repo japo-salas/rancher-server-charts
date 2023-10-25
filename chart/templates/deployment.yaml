@@ -10,7 +10,8 @@ metadata:
 {{ include "rancher.labels" . | indent 4 }}
 spec:
 {{- if .Values.nodeSelector }}
-nodeSelector: {{ .Values.nodeSelector }}
+nodeSelector:
+{{ toYaml .Values.nodeSelector | indent 2}}
 {{- end }}
 {{- if (gt (int .Values.replicas) 0) }}
   replicas: {{ .Values.replicas }}
